@@ -1,0 +1,21 @@
+# Copy this file to terraform.tfvars and customize the values
+
+# Basic Configuration
+aws_region   = "us-west-2"
+project_name = "myapp"
+environment  = "dev"
+
+# Network Configuration
+vpc_cidr               = "10.0.0.0/16"
+public_subnet_cidrs    = ["10.0.1.0/24", "10.0.2.0/24"]
+private_subnet_cidrs   = ["10.0.101.0/24", "10.0.102.0/24"]
+
+# EC2 Configuration
+instance_type  = "t3.micro"
+instance_count = 2
+
+# Optional: Add your SSH public key for EC2 access
+# key_pair_public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAB... your-email@example.com"
+
+# Infrastructure Options
+enable_alb_asg = false  # Set to false to use simple EC2 instances instead
