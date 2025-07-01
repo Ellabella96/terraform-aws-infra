@@ -161,46 +161,6 @@ terraform apply
 ```
 Visit the URL in your browser to see your deployed application.
 
-## 📊 Project Structure
-
-terraform-aws-infra/
-├── .github/
-│   └── workflows/
-│       └── terraform.yml
-├── environments/
-│   ├── dev/
-│       ├── main.tf
-│       ├── variables.tf
-│       ├── outputs.tf
-│       ├── terraform.tfvars.example
-│       └── versions.tf
-|
-├── modules/
-│   ├── vpc/
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   └── outputs.tf
-│   ├── ec2/
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   └── outputs.tf
-│   ├── s3/
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   └── outputs.tf
-│   ├── dynamodb/
-│       ├── main.tf
-│       ├── variables.tf
-│       └── outputs.tf
-│   
-├── scripts/
-│   ├── setup-backend.sh
-│   └── destroy-backend.sh
-├── .gitignore
-├── README.md      #this file
-└── backend-setup/
-    ├── main.tf
-    └── variables.tf
 
 ## 🔧 Available Commands
 
