@@ -85,28 +85,28 @@ cp terraform.tfvars.example terraform.tfvars
 nano terraform.tfvars
 ```
 
-#### Example `terraform.tfvars`:
-# Environment Configuration
+### Example `terraform.tfvars`:
+### Environment Configuration
 aws_region = "us-east-1"
 environment = "dev"
 project_name = "terraform-aws-infra"
 
-# Network Configuration
+### Network Configuration
 vpc_cidr = "10.0.0.0/16"
 availability_zones = ["us-east-1a", "us-east-1b"]
 
-# Instance Configuration
+#### Instance Configuration
 instance_type = "t3.micro"
 key_pair_name = "your-key-pair"  # Optional
 
-# Auto Scaling Configuration
+#### Auto Scaling Configuration
 enable_alb_asg = true
 asg_min_size = 1
 asg_max_size = 3
 asg_desired_capacity = 2
 
 
-# Tags
+## Tags
 common_tags = {
   Environment = "dev"
   Project     = "terraform-aws-infra"
