@@ -122,6 +122,7 @@ resource "aws_instance" "main" {
   vpc_security_group_ids = [aws_security_group.ec2.id]
   subnet_id              = var.subnet_ids[count.index % length(var.subnet_ids)]
   iam_instance_profile   = aws_iam_instance_profile.ec2.name
+  associate_public_ip_address = true
 
   user_data = base64encode(<<-EOF
 #!/bin/bash
