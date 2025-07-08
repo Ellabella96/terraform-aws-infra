@@ -70,6 +70,9 @@ resource "aws_dynamodb_table" "terraform_state_lock" {
     Environment = var.environment
     Project     = var.project_name
   }
+  point_in_time_recovery {
+    enabled = false  # Disable to allow easier cleanup
+  }
 }
 
 output "s3_bucket_name" {
