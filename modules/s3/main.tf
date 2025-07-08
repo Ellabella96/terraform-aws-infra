@@ -44,6 +44,11 @@ resource "aws_s3_bucket_public_access_block" "main" {
   restrict_public_buckets = var.block_public_access
 }
 
+resource "aws_s3_bucket" "terraform_state" {
+  bucket        = "..."
+  force_destroy = true  # This allows Terraform to delete non-empty buckets
+}
+
 # S3 bucket lifecycle configuration
 resource "aws_s3_bucket_lifecycle_configuration" "main" {
   count = var.enable_lifecycle ? 1 : 0
